@@ -1,7 +1,6 @@
 
-function [Best_FF,Best_P,Conv_curve]=AOA(N,M_Iter,LB,UB,Dim,F_obj,Function_name)
-%display('AOA Working');
-%Two variables to keep the positions and the fitness value of the best-obtained solution
+function [Best_FF,Best_P,Conv_curve]=HAOA(N,M_Iter,LB,UB,Dim,F_obj,Function_name)
+
 
 Best_P=zeros(1,Dim);
 Best_FF=inf;
