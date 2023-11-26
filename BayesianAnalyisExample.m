@@ -1,19 +1,13 @@
 clear, clc, close all
 
-% L.Kuncheva 26/06/2020
 
-% Initialisation ---------------------------------------------------------
-% Values used in the paper
 prior = 0.5; 
 r = 1; % rope
 
 % Load the data ----------------------------------------------------------
-z = xlsread('NBC_AODE_differences.xlsx','Data','P1:P12');
+z = xlsread('AOA_HAOA.xlsx','Data','P1:P12');
 
-% z = xlsread('HAOA_AOA.xlsx','a2:a13');
-% From a file containing the differences NBC-AODE (Table 7)
-
-% Histogram (Figure 10 in the paper) -------------------------------------
+-
 T = 150000; % number of repetitions
 S = signed_rank_test_diff(z,0,prior,T); % rope = 0
 
