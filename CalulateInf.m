@@ -1,18 +1,18 @@
-%分别用几种不同的方法J1,J2,J3，计算积分
+
 function [J1,J2,J3] = CalulateInf(X,f,LB,UB)
 X = sort(X);
 x = [LB;X';UB];
 d = size(x,1);
 J1=0;J2=0;J3=0;
 
-%积分法1
+
 for i = 2:d
     f0 = f(x(i-1));
     f1 = f(x(i));
     dist = x(i)-x(i-1);
     J1 = J1 + (f1 + f0)*dist/2;
 end
-%积分法2
+
 for i = 2:d
     f0 = f(x(i-1));
     f1 = f(x(i));
@@ -20,7 +20,7 @@ for i = 2:d
     dist = x(i)-x(i-1);
     J2 = J2 + (f1 + f0 + 4*f3)*dist/6;
 end
-%积分法3
+
 for i = 2:d
     f0 = f(x(i-1));
     f1 = f(x(i));
